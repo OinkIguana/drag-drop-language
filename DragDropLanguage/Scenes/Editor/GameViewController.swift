@@ -48,8 +48,9 @@ class GameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
+}
 
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+extension GameViewController: ViewControllerNavigation {
+    static var Storyboard: Storyboard = .main
+    static var ID: String = "Game"
 }
