@@ -16,6 +16,29 @@ class ProjectListViewController: UIViewController {
 
 extension ProjectListViewController {
     override func viewDidLoad() {
-         super.viewDidLoad()
+        super.viewDidLoad()
+
+        let fnMain = Function(
+            name: "main",
+            type: FunctionType(input: .primitive(.int), output: .primitive(.int)),
+            source: .script(Script(source: "return input + 3"))
+        )
+
+        let rootModule = Module(
+            name: "main",
+            types: [],
+            functions: [fnMain],
+            submodules: []
+        )
+
+        let project = Project(
+            name: "Tests",
+            lastModified: Date(),
+            packages: [],
+            rootModule: rootModule,
+            initialValue: .value(.int(4))
+        )
+
+        Runtime.run(project: project)
     }
 }

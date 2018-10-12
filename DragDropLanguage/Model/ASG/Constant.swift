@@ -6,10 +6,10 @@
 //  Copyright © 2018 Cameron Eldridge. All rights reserved.
 //
 
-enum Constant: Codable {
+enum Constant: Codable, Equatable {
     case int(Int)
     case char(Character)
-    case float(Float)
+    case float(Double)
     case bool(Bool)
     case symbol(String)
     case string(String)
@@ -33,7 +33,7 @@ enum Constant: Codable {
         switch try container.decode(Case.self, forKey: .case) {
         case .int: self = .int(try container.decode(Int.self, forKey: .value))
         case .char: self = .char(try container.decode(String.self, forKey: .value).first!)
-        case .float: self = .float(try container.decode(Float.self, forKey: .value))
+        case .float: self = .float(try container.decode(Double.self, forKey: .value))
         case .bool: self = .bool(try container.decode(Bool.self, forKey: .value))
         case .symbol: self = .symbol(try container.decode(String.self, forKey: .value))
         case .string: self = .string(try container.decode(String.self, forKey: .value))

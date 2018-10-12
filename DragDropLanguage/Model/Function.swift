@@ -6,8 +6,27 @@
 //  Copyright © 2018 Cameron Eldridge. All rights reserved.
 //
 
-struct Function: Codable {
+import Foundation
+
+struct Function: Codable, Equatable {
+    private let id: UUID
     let name: String
     let type: FunctionType
-    let source: CompleteASG
+    let source: Executable
+
+    init(name: String, type: FunctionType, source: Executable) {
+        self.id = UUID()
+        self.name = name
+        self.type = type
+        self.source = source
+    }
+
+    /// A unique name for this function, which must be a valid identifier name in the backing language
+    var uniqueName: String {
+        return "M__" + name + "__F__" + id.uuidString.replacingOccurrences(of: "-", with: "_")
+    }
+
+    static func == (lhs: Function, rhs: Function) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

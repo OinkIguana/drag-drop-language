@@ -12,6 +12,24 @@ struct Project: Codable {
     let name: String
     let lastModified: Date
 
-    let modules: [Module]
-    let main: Function
+    let packages: [Package]
+    let rootModule: Module
+
+    let initialValue: Value
+}
+
+extension Project {
+    func lookup(function definition: Definition) -> Function? {
+        if let package = definition.package {
+            return packages.first(where: { $0.name == package })?.lookup(function: definition)
+        }
+        return rootModule.lookup(function: definition)
+    }
+
+    func lookup(type definition: Definition) -> Type? {
+        if let package = definition.package {
+            return packages.first(where: { $0.name == package })?.lookup(type: definition)
+        }
+        return rootModule.lookup(type: definition)
+    }
 }

@@ -34,11 +34,35 @@
 		3248A4622143545500C63AB8 /* Primitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3248A4612143545500C63AB8 /* Primitive.swift */; };
 		3248A4662143590200C63AB8 /* FunctionCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3248A4652143590200C63AB8 /* FunctionCall.swift */; };
 		3248A468214359B000C63AB8 /* FunctionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3248A467214359B000C63AB8 /* FunctionType.swift */; };
-		3248A46A214359D300C63AB8 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3248A469214359D300C63AB8 /* Box.swift */; };
 		3248A46D21435A5F00C63AB8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3248A46C21435A5F00C63AB8 /* Constant.swift */; };
-		3248A46F21435E6A00C63AB8 /* CompleteASG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3248A46E21435E6A00C63AB8 /* CompleteASG.swift */; };
+		3248A46F21435E6A00C63AB8 /* Executable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3248A46E21435E6A00C63AB8 /* Executable.swift */; };
 		3248A47421435F0100C63AB8 /* Construct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3248A47321435F0100C63AB8 /* Construct.swift */; };
 		3248A47821435F7900C63AB8 /* CaseConstruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3248A47721435F7900C63AB8 /* CaseConstruct.swift */; };
+		32AF65682159602C00A6FE18 /* wren_opt_random.c in Sources */ = {isa = PBXBuildFile; fileRef = 32AF605A2159602A00A6FE18 /* wren_opt_random.c */; };
+		32AF65692159602C00A6FE18 /* wren_opt_meta.wren in Resources */ = {isa = PBXBuildFile; fileRef = 32AF605C2159602A00A6FE18 /* wren_opt_meta.wren */; };
+		32AF656A2159602C00A6FE18 /* wren_opt_random.wren in Resources */ = {isa = PBXBuildFile; fileRef = 32AF605D2159602A00A6FE18 /* wren_opt_random.wren */; };
+		32AF656B2159602C00A6FE18 /* wren_opt_meta.wren.inc in Sources */ = {isa = PBXBuildFile; fileRef = 32AF605F2159602A00A6FE18 /* wren_opt_meta.wren.inc */; };
+		32AF656C2159602C00A6FE18 /* wren_opt_meta.c in Sources */ = {isa = PBXBuildFile; fileRef = 32AF60602159602A00A6FE18 /* wren_opt_meta.c */; };
+		32AF656D2159602C00A6FE18 /* wren_opt_random.wren.inc in Sources */ = {isa = PBXBuildFile; fileRef = 32AF60612159602A00A6FE18 /* wren_opt_random.wren.inc */; };
+		32AF656E2159602C00A6FE18 /* wren_core.wren in Resources */ = {isa = PBXBuildFile; fileRef = 32AF60652159602A00A6FE18 /* wren_core.wren */; };
+		32AF656F2159602C00A6FE18 /* wren_core.wren.inc in Sources */ = {isa = PBXBuildFile; fileRef = 32AF60672159602A00A6FE18 /* wren_core.wren.inc */; };
+		32AF65702159602C00A6FE18 /* wren_vm.c in Sources */ = {isa = PBXBuildFile; fileRef = 32AF606C2159602A00A6FE18 /* wren_vm.c */; };
+		32AF65712159602C00A6FE18 /* wren_value.c in Sources */ = {isa = PBXBuildFile; fileRef = 32AF606D2159602A00A6FE18 /* wren_value.c */; };
+		32AF65722159602C00A6FE18 /* wren_compiler.c in Sources */ = {isa = PBXBuildFile; fileRef = 32AF606E2159602A00A6FE18 /* wren_compiler.c */; };
+		32AF65732159602C00A6FE18 /* wren_primitive.c in Sources */ = {isa = PBXBuildFile; fileRef = 32AF60702159602A00A6FE18 /* wren_primitive.c */; };
+		32AF65742159602C00A6FE18 /* wren_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 32AF60722159602A00A6FE18 /* wren_utils.c */; };
+		32AF65752159602C00A6FE18 /* wren_core.c in Sources */ = {isa = PBXBuildFile; fileRef = 32AF60732159602A00A6FE18 /* wren_core.c */; };
+		32AF65762159602C00A6FE18 /* wren_debug.c in Sources */ = {isa = PBXBuildFile; fileRef = 32AF60742159602A00A6FE18 /* wren_debug.c */; };
+		32AF697D2159B73200A6FE18 /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF697C2159B73200A6FE18 /* Runtime.swift */; };
+		32AF697F2159B78300A6FE18 /* WrenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF697E2159B78300A6FE18 /* WrenVM.swift */; };
+		32AF69812159B83900A6FE18 /* WrenHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF69802159B83900A6FE18 /* WrenHandle.swift */; };
+		32AF6983215AA3BE00A6FE18 /* WrenValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF6982215AA3BE00A6FE18 /* WrenValue.swift */; };
+		32AF698621648D2600A6FE18 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF698521648D2600A6FE18 /* Executor.swift */; };
+		32AF698821649B3900A6FE18 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AF698721649B3800A6FE18 /* Pattern.swift */; };
+		32EA9F97214DFA27005CDEC3 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EA9F96214DFA27005CDEC3 /* Package.swift */; };
+		32EA9F99214DFEC6005CDEC3 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EA9F98214DFEC6005CDEC3 /* Program.swift */; };
+		32EA9F9B214DFED1005CDEC3 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EA9F9A214DFED1005CDEC3 /* Script.swift */; };
+		32EA9F9E214DFF9C005CDEC3 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EA9F9D214DFF9C005CDEC3 /* Value.swift */; };
 		934999149F7C5856C0E7C419 /* Pods_DragDropLanguage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FA90D05CD22610E3E79B56 /* Pods_DragDropLanguage.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,11 +96,49 @@
 		3248A4612143545500C63AB8 /* Primitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Primitive.swift; sourceTree = "<group>"; };
 		3248A4652143590200C63AB8 /* FunctionCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionCall.swift; sourceTree = "<group>"; };
 		3248A467214359B000C63AB8 /* FunctionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionType.swift; sourceTree = "<group>"; };
-		3248A469214359D300C63AB8 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		3248A46C21435A5F00C63AB8 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		3248A46E21435E6A00C63AB8 /* CompleteASG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteASG.swift; sourceTree = "<group>"; };
+		3248A46E21435E6A00C63AB8 /* Executable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executable.swift; sourceTree = "<group>"; };
 		3248A47321435F0100C63AB8 /* Construct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Construct.swift; sourceTree = "<group>"; };
 		3248A47721435F7900C63AB8 /* CaseConstruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseConstruct.swift; sourceTree = "<group>"; };
+		32AF604D2159602A00A6FE18 /* wren.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wren.h; sourceTree = "<group>"; };
+		32AF604E2159602A00A6FE18 /* wren.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = wren.hpp; sourceTree = "<group>"; };
+		32AF605A2159602A00A6FE18 /* wren_opt_random.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wren_opt_random.c; sourceTree = "<group>"; };
+		32AF605B2159602A00A6FE18 /* wren_opt_meta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wren_opt_meta.h; sourceTree = "<group>"; };
+		32AF605C2159602A00A6FE18 /* wren_opt_meta.wren */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wren_opt_meta.wren; sourceTree = "<group>"; };
+		32AF605D2159602A00A6FE18 /* wren_opt_random.wren */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wren_opt_random.wren; sourceTree = "<group>"; };
+		32AF605E2159602A00A6FE18 /* wren_opt_random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wren_opt_random.h; sourceTree = "<group>"; };
+		32AF605F2159602A00A6FE18 /* wren_opt_meta.wren.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = wren_opt_meta.wren.inc; sourceTree = "<group>"; };
+		32AF60602159602A00A6FE18 /* wren_opt_meta.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wren_opt_meta.c; sourceTree = "<group>"; };
+		32AF60612159602A00A6FE18 /* wren_opt_random.wren.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = wren_opt_random.wren.inc; sourceTree = "<group>"; };
+		32AF60632159602A00A6FE18 /* wren_value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wren_value.h; sourceTree = "<group>"; };
+		32AF60642159602A00A6FE18 /* wren_opcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wren_opcodes.h; sourceTree = "<group>"; };
+		32AF60652159602A00A6FE18 /* wren_core.wren */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wren_core.wren; sourceTree = "<group>"; };
+		32AF60662159602A00A6FE18 /* wren_compiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wren_compiler.h; sourceTree = "<group>"; };
+		32AF60672159602A00A6FE18 /* wren_core.wren.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = wren_core.wren.inc; sourceTree = "<group>"; };
+		32AF60682159602A00A6FE18 /* wren_primitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wren_primitive.h; sourceTree = "<group>"; };
+		32AF60692159602A00A6FE18 /* wren_core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wren_core.h; sourceTree = "<group>"; };
+		32AF606A2159602A00A6FE18 /* wren_debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wren_debug.h; sourceTree = "<group>"; };
+		32AF606B2159602A00A6FE18 /* wren_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wren_utils.h; sourceTree = "<group>"; };
+		32AF606C2159602A00A6FE18 /* wren_vm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wren_vm.c; sourceTree = "<group>"; };
+		32AF606D2159602A00A6FE18 /* wren_value.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wren_value.c; sourceTree = "<group>"; };
+		32AF606E2159602A00A6FE18 /* wren_compiler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wren_compiler.c; sourceTree = "<group>"; };
+		32AF606F2159602A00A6FE18 /* wren_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wren_common.h; sourceTree = "<group>"; };
+		32AF60702159602A00A6FE18 /* wren_primitive.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wren_primitive.c; sourceTree = "<group>"; };
+		32AF60712159602A00A6FE18 /* wren_vm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wren_vm.h; sourceTree = "<group>"; };
+		32AF60722159602A00A6FE18 /* wren_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wren_utils.c; sourceTree = "<group>"; };
+		32AF60732159602A00A6FE18 /* wren_core.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wren_core.c; sourceTree = "<group>"; };
+		32AF60742159602A00A6FE18 /* wren_debug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wren_debug.c; sourceTree = "<group>"; };
+		32AF697C2159B73200A6FE18 /* Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
+		32AF697E2159B78300A6FE18 /* WrenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrenVM.swift; sourceTree = "<group>"; };
+		32AF69802159B83900A6FE18 /* WrenHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrenHandle.swift; sourceTree = "<group>"; };
+		32AF6982215AA3BE00A6FE18 /* WrenValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrenValue.swift; sourceTree = "<group>"; };
+		32AF698521648D2600A6FE18 /* Executor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
+		32AF698721649B3800A6FE18 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
+		32EA9F96214DFA27005CDEC3 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		32EA9F98214DFEC6005CDEC3 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		32EA9F9A214DFED1005CDEC3 /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
+		32EA9F9D214DFF9C005CDEC3 /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		32EA9FA0214E0050005CDEC3 /* DragDropLanguage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DragDropLanguage-Bridging-Header.h"; sourceTree = "<group>"; };
 		C39468DB5499EF7931E8DB21 /* Pods-DragDropLanguage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropLanguage.release.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropLanguage/Pods-DragDropLanguage.release.xcconfig"; sourceTree = "<group>"; };
 		CCE4C2A7F6ED6EEB0B711582 /* Pods-DragDropLanguage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropLanguage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropLanguage/Pods-DragDropLanguage.debug.xcconfig"; sourceTree = "<group>"; };
 		D3FA90D05CD22610E3E79B56 /* Pods_DragDropLanguage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragDropLanguage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +159,7 @@
 		320E62B3214350540021BCDF = {
 			isa = PBXGroup;
 			children = (
+				32AF5AA22159602600A6FE18 /* wren */,
 				320E62BE214350540021BCDF /* DragDropLanguage */,
 				320E62BD214350540021BCDF /* Products */,
 				E438D02F3FC9DB793CBAD5FE /* Pods */,
@@ -115,6 +178,7 @@
 		320E62BE214350540021BCDF /* DragDropLanguage */ = {
 			isa = PBXGroup;
 			children = (
+				32EA9F9F214E0032005CDEC3 /* Runtime */,
 				3248A44A214352AA00C63AB8 /* Model */,
 				3248A46B214359DB00C63AB8 /* Util */,
 				320E62D9214351B30021BCDF /* Scenes */,
@@ -158,8 +222,11 @@
 		3248A44A214352AA00C63AB8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				32EA9F9C214DFF8F005CDEC3 /* Runtime */,
+				3248A47221435E8E00C63AB8 /* ASG */,
 				3248A44D214352DC00C63AB8 /* Model.swift */,
 				3248A44B214352B300C63AB8 /* Project.swift */,
+				32EA9F96214DFA27005CDEC3 /* Package.swift */,
 				3248A44F2143530200C63AB8 /* Module.swift */,
 				3248A4532143534300C63AB8 /* Type.swift */,
 				3248A45B214353C600C63AB8 /* Enum.swift */,
@@ -169,7 +236,7 @@
 				3248A4612143545500C63AB8 /* Primitive.swift */,
 				3248A4512143531200C63AB8 /* Function.swift */,
 				3248A467214359B000C63AB8 /* FunctionType.swift */,
-				3248A47221435E8E00C63AB8 /* ASG */,
+				323CE3F6214420E80003A30E /* Definition.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,7 +244,6 @@
 		3248A46B214359DB00C63AB8 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				3248A469214359D300C63AB8 /* Box.swift */,
 				323CE3FA2144295A0003A30E /* ViewControllerNavigation.swift */,
 			);
 			path = Util;
@@ -187,17 +253,107 @@
 			isa = PBXGroup;
 			children = (
 				3248A46C21435A5F00C63AB8 /* Constant.swift */,
-				3248A46E21435E6A00C63AB8 /* CompleteASG.swift */,
+				3248A46E21435E6A00C63AB8 /* Executable.swift */,
 				323CE3F221441E5B0003A30E /* Node.swift */,
+				32EA9F98214DFEC6005CDEC3 /* Program.swift */,
 				3248A47321435F0100C63AB8 /* Construct.swift */,
+				32AF698721649B3800A6FE18 /* Pattern.swift */,
+				32EA9F9A214DFED1005CDEC3 /* Script.swift */,
 				3248A47721435F7900C63AB8 /* CaseConstruct.swift */,
 				323CE3F8214421880003A30E /* Match.swift */,
-				323CE3F6214420E80003A30E /* Definition.swift */,
 				323CE3F4214420270003A30E /* Destructure.swift */,
 				3248A4652143590200C63AB8 /* FunctionCall.swift */,
 				323CE3F021441DF20003A30E /* Edge.swift */,
 			);
 			path = ASG;
+			sourceTree = "<group>";
+		};
+		32AF5AA22159602600A6FE18 /* wren */ = {
+			isa = PBXGroup;
+			children = (
+				32AF60372159602A00A6FE18 /* src */,
+			);
+			path = wren;
+			sourceTree = "<group>";
+		};
+		32AF60372159602A00A6FE18 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				32AF604C2159602A00A6FE18 /* include */,
+				32AF60592159602A00A6FE18 /* optional */,
+				32AF60622159602A00A6FE18 /* vm */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		32AF604C2159602A00A6FE18 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				32AF604D2159602A00A6FE18 /* wren.h */,
+				32AF604E2159602A00A6FE18 /* wren.hpp */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		32AF60592159602A00A6FE18 /* optional */ = {
+			isa = PBXGroup;
+			children = (
+				32AF605A2159602A00A6FE18 /* wren_opt_random.c */,
+				32AF605B2159602A00A6FE18 /* wren_opt_meta.h */,
+				32AF605C2159602A00A6FE18 /* wren_opt_meta.wren */,
+				32AF605D2159602A00A6FE18 /* wren_opt_random.wren */,
+				32AF605E2159602A00A6FE18 /* wren_opt_random.h */,
+				32AF605F2159602A00A6FE18 /* wren_opt_meta.wren.inc */,
+				32AF60602159602A00A6FE18 /* wren_opt_meta.c */,
+				32AF60612159602A00A6FE18 /* wren_opt_random.wren.inc */,
+			);
+			path = optional;
+			sourceTree = "<group>";
+		};
+		32AF60622159602A00A6FE18 /* vm */ = {
+			isa = PBXGroup;
+			children = (
+				32AF60632159602A00A6FE18 /* wren_value.h */,
+				32AF60642159602A00A6FE18 /* wren_opcodes.h */,
+				32AF60652159602A00A6FE18 /* wren_core.wren */,
+				32AF60662159602A00A6FE18 /* wren_compiler.h */,
+				32AF60672159602A00A6FE18 /* wren_core.wren.inc */,
+				32AF60682159602A00A6FE18 /* wren_primitive.h */,
+				32AF60692159602A00A6FE18 /* wren_core.h */,
+				32AF606A2159602A00A6FE18 /* wren_debug.h */,
+				32AF606B2159602A00A6FE18 /* wren_utils.h */,
+				32AF606C2159602A00A6FE18 /* wren_vm.c */,
+				32AF606D2159602A00A6FE18 /* wren_value.c */,
+				32AF606E2159602A00A6FE18 /* wren_compiler.c */,
+				32AF606F2159602A00A6FE18 /* wren_common.h */,
+				32AF60702159602A00A6FE18 /* wren_primitive.c */,
+				32AF60712159602A00A6FE18 /* wren_vm.h */,
+				32AF60722159602A00A6FE18 /* wren_utils.c */,
+				32AF60732159602A00A6FE18 /* wren_core.c */,
+				32AF60742159602A00A6FE18 /* wren_debug.c */,
+			);
+			path = vm;
+			sourceTree = "<group>";
+		};
+		32EA9F9C214DFF8F005CDEC3 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				32EA9F9D214DFF9C005CDEC3 /* Value.swift */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		32EA9F9F214E0032005CDEC3 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				32EA9FA0214E0050005CDEC3 /* DragDropLanguage-Bridging-Header.h */,
+				32AF697C2159B73200A6FE18 /* Runtime.swift */,
+				32AF698521648D2600A6FE18 /* Executor.swift */,
+				32AF697E2159B78300A6FE18 /* WrenVM.swift */,
+				32AF6982215AA3BE00A6FE18 /* WrenValue.swift */,
+				32AF69802159B83900A6FE18 /* WrenHandle.swift */,
+			);
+			path = Runtime;
 			sourceTree = "<group>";
 		};
 		533459186B41F26CCF4FB35D /* Frameworks */ = {
@@ -250,6 +406,7 @@
 				TargetAttributes = {
 					320E62BB214350540021BCDF = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -260,6 +417,7 @@
 			knownRegions = (
 				en,
 				Base,
+				English,
 			);
 			mainGroup = 320E62B3214350540021BCDF;
 			productRefGroup = 320E62BD214350540021BCDF /* Products */;
@@ -279,8 +437,11 @@
 				320E62CB214350540021BCDF /* Main.storyboard in Resources */,
 				320E62C2214350540021BCDF /* GameScene.sks in Resources */,
 				320E62CD214350550021BCDF /* Assets.xcassets in Resources */,
+				32AF656A2159602C00A6FE18 /* wren_opt_random.wren in Resources */,
 				320E62D0214350550021BCDF /* LaunchScreen.storyboard in Resources */,
 				320E62C4214350540021BCDF /* Actions.sks in Resources */,
+				32AF65692159602C00A6FE18 /* wren_opt_meta.wren in Resources */,
+				32AF656E2159602C00A6FE18 /* wren_core.wren in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,30 +475,51 @@
 			files = (
 				323CE3FB2144295A0003A30E /* ViewControllerNavigation.swift in Sources */,
 				320E62DB214351CE0021BCDF /* ProjectListViewController.swift in Sources */,
+				32AF698621648D2600A6FE18 /* Executor.swift in Sources */,
+				32AF65702159602C00A6FE18 /* wren_vm.c in Sources */,
 				323CE3F321441E5B0003A30E /* Node.swift in Sources */,
+				32AF6983215AA3BE00A6FE18 /* WrenValue.swift in Sources */,
+				32AF698821649B3900A6FE18 /* Pattern.swift in Sources */,
 				320E62C6214350540021BCDF /* GameScene.swift in Sources */,
+				32AF656D2159602C00A6FE18 /* wren_opt_random.wren.inc in Sources */,
 				323CE3F121441DF20003A30E /* Edge.swift in Sources */,
 				3248A45C214353C600C63AB8 /* Enum.swift in Sources */,
 				320E62C8214350540021BCDF /* GameViewController.swift in Sources */,
+				32AF656C2159602C00A6FE18 /* wren_opt_meta.c in Sources */,
+				32AF65682159602C00A6FE18 /* wren_opt_random.c in Sources */,
 				3248A4622143545500C63AB8 /* Primitive.swift in Sources */,
-				3248A46F21435E6A00C63AB8 /* CompleteASG.swift in Sources */,
+				3248A46F21435E6A00C63AB8 /* Executable.swift in Sources */,
+				32AF697D2159B73200A6FE18 /* Runtime.swift in Sources */,
 				3248A47821435F7900C63AB8 /* CaseConstruct.swift in Sources */,
 				323CE3F9214421880003A30E /* Match.swift in Sources */,
 				3248A44E214352DC00C63AB8 /* Model.swift in Sources */,
 				3248A45A2143538E00C63AB8 /* StructField.swift in Sources */,
 				3248A4502143530200C63AB8 /* Module.swift in Sources */,
 				3248A44C214352B300C63AB8 /* Project.swift in Sources */,
-				3248A46A214359D300C63AB8 /* Box.swift in Sources */,
+				32AF69812159B83900A6FE18 /* WrenHandle.swift in Sources */,
 				320E62C0214350540021BCDF /* AppDelegate.swift in Sources */,
+				32AF65752159602C00A6FE18 /* wren_core.c in Sources */,
+				32AF65742159602C00A6FE18 /* wren_utils.c in Sources */,
 				3248A45E214353DE00C63AB8 /* EnumCase.swift in Sources */,
 				3248A4522143531200C63AB8 /* Function.swift in Sources */,
+				32AF656F2159602C00A6FE18 /* wren_core.wren.inc in Sources */,
 				323CE3F7214420E80003A30E /* Definition.swift in Sources */,
 				3248A468214359B000C63AB8 /* FunctionType.swift in Sources */,
+				32AF65762159602C00A6FE18 /* wren_debug.c in Sources */,
+				32EA9F9E214DFF9C005CDEC3 /* Value.swift in Sources */,
 				3248A46D21435A5F00C63AB8 /* Constant.swift in Sources */,
+				32EA9F99214DFEC6005CDEC3 /* Program.swift in Sources */,
 				3248A4542143534300C63AB8 /* Type.swift in Sources */,
 				3248A47421435F0100C63AB8 /* Construct.swift in Sources */,
+				32AF65732159602C00A6FE18 /* wren_primitive.c in Sources */,
+				32AF697F2159B78300A6FE18 /* WrenVM.swift in Sources */,
+				32EA9F97214DFA27005CDEC3 /* Package.swift in Sources */,
 				3248A4582143537700C63AB8 /* Struct.swift in Sources */,
+				32AF65722159602C00A6FE18 /* wren_compiler.c in Sources */,
 				3248A4662143590200C63AB8 /* FunctionCall.swift in Sources */,
+				32AF656B2159602C00A6FE18 /* wren_opt_meta.wren.inc in Sources */,
+				32EA9F9B214DFED1005CDEC3 /* Script.swift in Sources */,
+				32AF65712159602C00A6FE18 /* wren_value.c in Sources */,
 				323CE3F5214420270003A30E /* Destructure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +665,7 @@
 			baseConfigurationReference = CCE4C2A7F6ED6EEB0B711582 /* Pods-DragDropLanguage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KT5TYPEMWT;
 				INFOPLIST_FILE = DragDropLanguage/Info.plist;
@@ -490,9 +673,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cameldridge.DragDropLanguage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "DragDropLanguage/Runtime/DragDropLanguage-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -502,6 +688,7 @@
 			baseConfigurationReference = C39468DB5499EF7931E8DB21 /* Pods-DragDropLanguage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KT5TYPEMWT;
 				INFOPLIST_FILE = DragDropLanguage/Info.plist;
@@ -509,9 +696,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cameldridge.DragDropLanguage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "DragDropLanguage/Runtime/DragDropLanguage-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

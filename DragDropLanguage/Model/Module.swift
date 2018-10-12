@@ -12,3 +12,21 @@ struct Module: Codable {
     let functions: [Function]
     let submodules: [Module]
 }
+
+extension Module {
+    func lookup(function definition: Definition) -> Function? {
+        if let root = definition.root {
+            return submodules.first(where: { $0.name == root })?.lookup(function: definition)
+        } else {
+            return functions.first(where: { $0.name == definition.name })
+        }
+    }
+
+    func lookup(type definition: Definition) -> Type? {
+        if let root = definition.root {
+            return submodules.first(where: { $0.name == root })?.lookup(type: definition)
+        } else {
+            return types.first(where: { $0.name == definition.name })
+        }
+    }
+}

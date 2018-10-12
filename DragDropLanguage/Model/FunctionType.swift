@@ -7,6 +7,6 @@
 //
 
 struct FunctionType: Codable {
-    let input: Box<Type>
-    let output: Box<Type>
+    let input: Type
+    let output: Type
 }

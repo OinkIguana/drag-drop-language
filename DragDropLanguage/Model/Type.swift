@@ -6,7 +6,7 @@
 //  Copyright © 2018 Cameron Eldridge. All rights reserved.
 //
 
-enum Type: Codable {
+indirect enum Type: Codable {
     case `enum`(Enum)
     case `struct`(Struct)
     case primitive(Primitive)
@@ -49,6 +49,16 @@ enum Type: Codable {
         case .function(let value):
             try container.encode(Case.function, forKey: .case)
             try container.encode(value, forKey: .value)
+        }
+    }
+}
+
+extension Type {
+    var name: String? {
+        switch self {
+        case .enum(let `enum`): return `enum`.name
+        case .struct(let `struct`): return `struct`.name
+        default: return nil
         }
     }
 }

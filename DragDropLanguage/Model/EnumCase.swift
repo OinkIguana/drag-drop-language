@@ -8,5 +8,5 @@
 
 struct EnumCase: Codable {
     let name: String
-    let fields: [StructField]
+    let type: Type
 }
