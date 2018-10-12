@@ -103,21 +103,22 @@ extension Module {
                 let source = """
                 // Struct: \(name).\(`struct`.name)
                 class \(`struct`.uniqueName) {
-                    construct \(CONSTRUCTOR_NAME)(\(`struct`.fields.map { "\($0.name)" }.joined(separator: ","))) {
-                        \(`struct`.fields.map { "_\($0.name) = \($0.name)" }.joined(separator: "\n"))
+                    construct \(CONSTRUCTOR_NAME)(\(`struct`.fields.map { "\($0.name)" }.joined(separator: ", "))) {
+                        \(`struct`.fields.map { "_\($0.name) = \($0.name)" }.joined(separator: "\n        "))
                     }
-                    \(`struct`.fields.map { "\($0.name) { _\($0.name) }" }.joined(separator: "\n")))
-                    \(`struct`.fields.map { "\($0.name)=(value) { _\($0.name) = value }" }.joined(separator: "\n")))
+
+                    \(`struct`.fields.map { "\($0.name) { _\($0.name) }" }.joined(separator: "\n    "))
+                    \(`struct`.fields.map { "\($0.name)=(value) { _\($0.name) = value }" }.joined(separator: "\n    "))
 
                     serialized {
-                        ["\(STRUCT_SENTINEL)", \(`struct`.fields.map {
+                        return ["\(STRUCT_SENTINEL)", \(`struct`.fields.map {
                             switch $0.type {
                             case .struct, .enum:
                                 return "_\($0.name).serialized"
                             default:
                                 return "_\($0.name)"
                             }
-                        }.joined(separator: ","))]
+                        }.joined(separator: ", "))]
                     }
                 }
                 """
@@ -130,6 +131,9 @@ extension Module {
                         _case = case
                         _value = value
                     }
+
+                    case { _case }
+                    value { _value }
 
                     serialized { ["\(ENUM_SENTINEL)", _case, _value] }
                 }
@@ -171,7 +175,7 @@ struct Runtime {
         }
 
         func execute(function definition: Definition, input: Value) throws -> Value {
-            let function = project.lookup(function: definition)!
+            let function = try project.lookup(function: definition)
             return try execute(function: function, input: input, qualification: definition)
         }
 

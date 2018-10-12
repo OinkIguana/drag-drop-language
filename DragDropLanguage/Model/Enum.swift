@@ -15,7 +15,7 @@ struct Enum: Codable, Equatable {
 
     /// A unique name for this type, which must be a valid identifier name in the backing language
     var uniqueName: String {
-        return name + "E__" + id.uuidString.replacingOccurrences(of: "-", with: "_")
+        return "E__" + id.uuidString.replacingOccurrences(of: "-", with: "_")
     }
 
     static func == (lhs: Enum, rhs: Enum) -> Bool {

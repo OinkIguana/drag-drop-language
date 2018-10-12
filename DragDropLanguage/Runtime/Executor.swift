@@ -15,6 +15,12 @@ struct MissingBranchError: Error {}
 /// Indicates that something went wrong at runtime
 struct RuntimeError: Error {}
 
+/// Indicates that a definition pointed to a nonexistent type
+struct UndefinedTypeError: Error {}
+
+/// Indicates that a definition pointed to a nonexistent function
+struct UndefinedFunctionError: Error {}
+
 /// Indicates that there was no way to compute a value for a node, and that it should be abandoned in favor of another
 /// path
 struct WrongPathError: Error {}
@@ -79,10 +85,13 @@ class Executor {
             }
             state[node.id] = .enum(caseConstruct.type, field, try compute(at: inputs[0]))
         case .construct(let construct):
-            guard inputs.count == construct.type.fields.count else {
+            guard case .struct(let type) = try vm.project.lookup(type: construct.definition) else {
+                throw UndefinedTypeError()
+            }
+            guard inputs.count == type.fields.count else {
                 throw MissingBranchError()
             }
-            state[node.id] = .struct(construct.type, try inputs.map(compute(at:)))
+            state[node.id] = .struct(type, try inputs.map(compute(at:)))
         case .match:
             guard
                 case .match(_, let pattern) = path,

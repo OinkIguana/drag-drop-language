@@ -7,6 +7,5 @@
 //
 
 struct Construct: Codable {
-    let type: Struct
     let definition: Definition
 }

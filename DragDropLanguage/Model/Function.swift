@@ -23,7 +23,7 @@ struct Function: Codable, Equatable {
 
     /// A unique name for this function, which must be a valid identifier name in the backing language
     var uniqueName: String {
-        return "M__" + name + "__F__" + id.uuidString.replacingOccurrences(of: "-", with: "_")
+        return "F__" + id.uuidString.replacingOccurrences(of: "-", with: "_")
     }
 
     static func == (lhs: Function, rhs: Function) -> Bool {

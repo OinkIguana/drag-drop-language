@@ -10,6 +10,9 @@ import Foundation
 
 struct NodeID: Codable, Equatable, Hashable {
     let id: UUID
+    init(id: UUID = UUID()) {
+        self.id = id
+    }
 }
 
 struct Node: Codable, Equatable {

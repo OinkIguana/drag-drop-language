@@ -16,6 +16,7 @@
 		320E62CD214350550021BCDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320E62CC214350550021BCDF /* Assets.xcassets */; };
 		320E62D0214350550021BCDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320E62CE214350550021BCDF /* LaunchScreen.storyboard */; };
 		320E62DB214351CE0021BCDF /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E62DA214351CE0021BCDF /* ProjectListViewController.swift */; };
+		32293CDF2170E1AF000CA485 /* Stdlib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32293CDE2170E1AF000CA485 /* Stdlib.swift */; };
 		323CE3F121441DF20003A30E /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323CE3F021441DF20003A30E /* Edge.swift */; };
 		323CE3F321441E5B0003A30E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323CE3F221441E5B0003A30E /* Node.swift */; };
 		323CE3F5214420270003A30E /* Destructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323CE3F4214420270003A30E /* Destructure.swift */; };
@@ -78,6 +79,7 @@
 		320E62CF214350550021BCDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		320E62D1214350550021BCDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		320E62DA214351CE0021BCDF /* ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
+		32293CDE2170E1AF000CA485 /* Stdlib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stdlib.swift; sourceTree = "<group>"; };
 		323CE3F021441DF20003A30E /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
 		323CE3F221441E5B0003A30E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		323CE3F4214420270003A30E /* Destructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destructure.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		320E62BE214350540021BCDF /* DragDropLanguage */ = {
 			isa = PBXGroup;
 			children = (
+				32293CDD2170E1A0000CA485 /* Stdlib */,
 				32EA9F9F214E0032005CDEC3 /* Runtime */,
 				3248A44A214352AA00C63AB8 /* Model */,
 				3248A46B214359DB00C63AB8 /* Util */,
@@ -217,6 +220,14 @@
 				320E62DA214351CE0021BCDF /* ProjectListViewController.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		32293CDD2170E1A0000CA485 /* Stdlib */ = {
+			isa = PBXGroup;
+			children = (
+				32293CDE2170E1AF000CA485 /* Stdlib.swift */,
+			);
+			path = Stdlib;
 			sourceTree = "<group>";
 		};
 		3248A44A214352AA00C63AB8 /* Model */ = {
@@ -517,6 +528,7 @@
 				3248A4582143537700C63AB8 /* Struct.swift in Sources */,
 				32AF65722159602C00A6FE18 /* wren_compiler.c in Sources */,
 				3248A4662143590200C63AB8 /* FunctionCall.swift in Sources */,
+				32293CDF2170E1AF000CA485 /* Stdlib.swift in Sources */,
 				32AF656B2159602C00A6FE18 /* wren_opt_meta.wren.inc in Sources */,
 				32EA9F9B214DFED1005CDEC3 /* Script.swift in Sources */,
 				32AF65712159602C00A6FE18 /* wren_value.c in Sources */,

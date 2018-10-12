@@ -14,19 +14,31 @@ struct Module: Codable {
 }
 
 extension Module {
-    func lookup(function definition: Definition) -> Function? {
+    func lookup(function definition: Definition) throws -> Function {
         if let root = definition.root {
-            return submodules.first(where: { $0.name == root })?.lookup(function: definition)
+            guard let module = submodules.first(where: { $0.name == root }) else {
+                throw UndefinedFunctionError()
+            }
+            return try module.lookup(function: definition.childModule)
         } else {
-            return functions.first(where: { $0.name == definition.name })
+            guard let function = functions.first(where: { $0.name == definition.name }) else {
+                throw UndefinedFunctionError()
+            }
+            return function
         }
     }
 
-    func lookup(type definition: Definition) -> Type? {
+    func lookup(type definition: Definition) throws -> Type {
         if let root = definition.root {
-            return submodules.first(where: { $0.name == root })?.lookup(type: definition)
+            guard let module = submodules.first(where: { $0.name == root }) else {
+                throw UndefinedFunctionError()
+            }
+            return try module.lookup(type: definition.childModule)
         } else {
-            return types.first(where: { $0.name == definition.name })
+            guard let type = types.first(where: { $0.name == definition.name }) else {
+                throw UndefinedFunctionError()
+            }
+            return type
         }
     }
 }

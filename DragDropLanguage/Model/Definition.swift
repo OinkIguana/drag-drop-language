@@ -18,4 +18,12 @@ extension Definition {
     var root: String? {
         return modulePath.first
     }
+
+    var childModule: Definition {
+        return Definition(
+            package: package,
+            modulePath: Array(modulePath.dropFirst()),
+            name: name
+        )
+    }
 }

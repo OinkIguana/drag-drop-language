@@ -7,6 +7,5 @@
 //
 
 struct FunctionCall: Codable {
-    let type: FunctionType
     let definition: Definition
 }

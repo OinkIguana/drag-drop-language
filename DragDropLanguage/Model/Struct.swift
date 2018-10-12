@@ -13,9 +13,15 @@ struct Struct: Codable, Equatable {
     let name: String
     let fields: [StructField]
 
+    init(name: String, fields: [StructField]) {
+        self.id = UUID()
+        self.name = name
+        self.fields = fields
+    }
+
     /// A unique name for this type, which must be a valid identifier name in the backing language
     var uniqueName: String {
-        return name + "S__" + id.uuidString.replacingOccurrences(of: "-", with: "_")
+        return "S__" + id.uuidString.replacingOccurrences(of: "-", with: "_")
     }
 
     static func == (lhs: Struct, rhs: Struct) -> Bool {

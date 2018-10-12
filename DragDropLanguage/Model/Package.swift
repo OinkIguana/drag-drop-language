@@ -12,11 +12,11 @@ struct Package: Codable {
 }
 
 extension Package {
-    func lookup(function definition: Definition) -> Function? {
-        return definitions.lookup(function: definition)
+    func lookup(function definition: Definition) throws -> Function {
+        return try definitions.lookup(function: definition)
     }
 
-    func lookup(type definition: Definition) -> Type? {
-        return definitions.lookup(type: definition)
+    func lookup(type definition: Definition) throws -> Type {
+        return try definitions.lookup(type: definition)
     }
 }
