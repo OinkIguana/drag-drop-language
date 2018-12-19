@@ -22,11 +22,13 @@ extension Value {
     init(from wrenValue: WrenValue, expecting: Type) throws {
         switch (wrenValue, expecting) {
         case (.bool(let bool), .primitive(.bool)): self = .value(.bool(bool))
-        case (.double(let double), .primitive(.float)): self = .value(.float(double))
+        case (.double(let double), .primitive(.double)): self = .value(.float(double))
         case (.double(let double), .primitive(.int)): self = .value(.int(Int(double)))
         case (.int(let int), .primitive(.int)): self = .value(.int(int))
         case (.string(let string), .primitive(.string)): self = .value(.string(string))
         case (.string(let string), .primitive(.symbol)): self = .value(.symbol(string))
+        case (.string(let string), .primitive(.char)) where string.count == 1: self = .value(.char(string.first!))
+        case (.double(let double), .primitive(.char)): self = .value(.char(Character(Unicode.Scalar(UInt32(double))!)))
         case (.list(let list), .struct(let `struct`))
             where list[0] == .string(STRUCT_SENTINEL) && list.count == `struct`.fields.count + 1:
             self = .struct(
@@ -37,7 +39,7 @@ extension Value {
             )
         case (.list(let list), .enum(let `enum`)) where list[0] == .string(ENUM_SENTINEL) && list.count == 3:
             guard case .double(let index) = list[1] else {
-                throw WrongTypeError()
+                throw WrongTypeError(expected: .primitive(.double), found: list[1])
             }
             let caseIndex = Int(index)
             self = .enum(
@@ -46,7 +48,7 @@ extension Value {
                 try Value(from: list[2], expecting: `enum`.cases[caseIndex].type)
             )
         case (.handle, _): fatalError("Unimplemented")
-        default: throw WrongTypeError()
+        default: throw WrongTypeError(expected: expecting, found: wrenValue)
         }
     }
 
@@ -186,7 +188,7 @@ struct Runtime {
             case .script:
                 let receiver = vm.variable(module: qualification?.package, name: function.uniqueName)
                 let wrenValue = try vm.call(receiver, FUNCTION_EXEC_NAME, args: [try input.asWrenValue(in: vm)])
-                return try Value(from: wrenValue, expecting: function.type.output)
+                return try Value(from: wrenValue, expecting: project.resolve(type: function.type.output))
             }
         }
 

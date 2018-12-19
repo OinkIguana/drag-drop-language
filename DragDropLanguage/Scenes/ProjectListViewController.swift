@@ -33,13 +33,13 @@ extension ProjectListViewController {
                     Node(id: outputNode, kind: .output),
                     Node(id: threeNode, kind: .constant(.int(3))),
                     Node(id: structNode, kind: .construct(Construct(definition: Definition(
-                        package: "std",
-                        modulePath: ["Math"],
-                        name: "Operation"
+                        package: "Core",
+                        modulePath: ["Int"],
+                        name: "Operator"
                     )))),
                     Node(id: plusNode, kind: .function(FunctionCall(definition: Definition(
-                        package: "std",
-                        modulePath: ["Math"],
+                        package: "Core",
+                        modulePath: ["Int"],
                         name: "+"
                     ))))
                 ],
@@ -62,7 +62,7 @@ extension ProjectListViewController {
         let project = Project(
             name: "Tests",
             lastModified: Date(),
-            packages: [stdlib],
+            packages: [package],
             rootModule: rootModule,
             initialValue: .value(.int(4))
         )

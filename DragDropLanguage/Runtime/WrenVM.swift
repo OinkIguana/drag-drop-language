@@ -6,7 +6,9 @@
 //  Copyright © 2018 Cameron Eldridge. All rights reserved.
 //
 
-struct WrenCompileError: Error {}
+struct WrenCompileError: Error {
+    let source: String
+}
 struct WrenRuntimeError: Error {}
 
 class WrenVM {
@@ -29,7 +31,7 @@ extension WrenVM {
     func interpret(module: String? = nil, _ source: String) throws {
         switch wrenInterpret(vm, module ?? "main", source) {
         case WREN_RESULT_COMPILE_ERROR:
-            throw WrenCompileError()
+            throw WrenCompileError(source: source)
         case WREN_RESULT_RUNTIME_ERROR:
             throw WrenRuntimeError()
         default: break

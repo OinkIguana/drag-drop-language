@@ -1,0 +1,1 @@
+return input != 0

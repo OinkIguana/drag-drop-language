@@ -16,17 +16,24 @@ struct MissingBranchError: Error {}
 struct RuntimeError: Error {}
 
 /// Indicates that a definition pointed to a nonexistent type
-struct UndefinedTypeError: Error {}
+struct UndefinedTypeError: Error {
+    let definition: Definition
+}
 
 /// Indicates that a definition pointed to a nonexistent function
-struct UndefinedFunctionError: Error {}
+struct UndefinedFunctionError: Error {
+    let definition: Definition
+}
 
 /// Indicates that there was no way to compute a value for a node, and that it should be abandoned in favor of another
 /// path
 struct WrongPathError: Error {}
 
 /// Indicates that a function returned a type that was not the expected return type
-struct WrongTypeError: Error {}
+struct WrongTypeError: Error {
+    let expected: Type
+    let found: WrenValue
+}
 
 class Executor {
     unowned var vm: Runtime.VM
@@ -86,7 +93,7 @@ class Executor {
             state[node.id] = .enum(caseConstruct.type, field, try compute(at: inputs[0]))
         case .construct(let construct):
             guard case .struct(let type) = try vm.project.lookup(type: construct.definition) else {
-                throw UndefinedTypeError()
+                throw InvalidGraphError()
             }
             guard inputs.count == type.fields.count else {
                 throw MissingBranchError()

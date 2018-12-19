@@ -17,12 +17,12 @@ extension Module {
     func lookup(function definition: Definition) throws -> Function {
         if let root = definition.root {
             guard let module = submodules.first(where: { $0.name == root }) else {
-                throw UndefinedFunctionError()
+                throw UndefinedFunctionError(definition: definition)
             }
             return try module.lookup(function: definition.childModule)
         } else {
             guard let function = functions.first(where: { $0.name == definition.name }) else {
-                throw UndefinedFunctionError()
+                throw UndefinedFunctionError(definition: definition)
             }
             return function
         }
@@ -31,12 +31,12 @@ extension Module {
     func lookup(type definition: Definition) throws -> Type {
         if let root = definition.root {
             guard let module = submodules.first(where: { $0.name == root }) else {
-                throw UndefinedFunctionError()
+                throw UndefinedTypeError(definition: definition)
             }
             return try module.lookup(type: definition.childModule)
         } else {
             guard let type = types.first(where: { $0.name == definition.name }) else {
-                throw UndefinedFunctionError()
+                throw UndefinedTypeError(definition: definition)
             }
             return type
         }

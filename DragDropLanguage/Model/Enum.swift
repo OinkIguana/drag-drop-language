@@ -13,6 +13,12 @@ struct Enum: Codable, Equatable {
     let name: String
     let cases: [EnumCase]
 
+    init(name: String, cases: [EnumCase]) {
+        self.id = UUID()
+        self.name = name
+        self.cases = cases
+    }
+
     /// A unique name for this type, which must be a valid identifier name in the backing language
     var uniqueName: String {
         return "E__" + id.uuidString.replacingOccurrences(of: "-", with: "_")

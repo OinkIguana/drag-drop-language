@@ -16,7 +16,6 @@
 		320E62CD214350550021BCDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320E62CC214350550021BCDF /* Assets.xcassets */; };
 		320E62D0214350550021BCDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320E62CE214350550021BCDF /* LaunchScreen.storyboard */; };
 		320E62DB214351CE0021BCDF /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E62DA214351CE0021BCDF /* ProjectListViewController.swift */; };
-		32293CDF2170E1AF000CA485 /* Stdlib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32293CDE2170E1AF000CA485 /* Stdlib.swift */; };
 		323CE3F121441DF20003A30E /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323CE3F021441DF20003A30E /* Edge.swift */; };
 		323CE3F321441E5B0003A30E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323CE3F221441E5B0003A30E /* Node.swift */; };
 		323CE3F5214420270003A30E /* Destructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323CE3F4214420270003A30E /* Destructure.swift */; };
@@ -39,6 +38,7 @@
 		3248A46F21435E6A00C63AB8 /* Executable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3248A46E21435E6A00C63AB8 /* Executable.swift */; };
 		3248A47421435F0100C63AB8 /* Construct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3248A47321435F0100C63AB8 /* Construct.swift */; };
 		3248A47821435F7900C63AB8 /* CaseConstruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3248A47721435F7900C63AB8 /* CaseConstruct.swift */; };
+		326A428B21769AE6002821F0 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326A428A21769AE6002821F0 /* Core.swift */; };
 		32AF65682159602C00A6FE18 /* wren_opt_random.c in Sources */ = {isa = PBXBuildFile; fileRef = 32AF605A2159602A00A6FE18 /* wren_opt_random.c */; };
 		32AF65692159602C00A6FE18 /* wren_opt_meta.wren in Resources */ = {isa = PBXBuildFile; fileRef = 32AF605C2159602A00A6FE18 /* wren_opt_meta.wren */; };
 		32AF656A2159602C00A6FE18 /* wren_opt_random.wren in Resources */ = {isa = PBXBuildFile; fileRef = 32AF605D2159602A00A6FE18 /* wren_opt_random.wren */; };
@@ -64,7 +64,6 @@
 		32EA9F99214DFEC6005CDEC3 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EA9F98214DFEC6005CDEC3 /* Program.swift */; };
 		32EA9F9B214DFED1005CDEC3 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EA9F9A214DFED1005CDEC3 /* Script.swift */; };
 		32EA9F9E214DFF9C005CDEC3 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EA9F9D214DFF9C005CDEC3 /* Value.swift */; };
-		934999149F7C5856C0E7C419 /* Pods_DragDropLanguage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FA90D05CD22610E3E79B56 /* Pods_DragDropLanguage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +78,6 @@
 		320E62CF214350550021BCDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		320E62D1214350550021BCDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		320E62DA214351CE0021BCDF /* ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
-		32293CDE2170E1AF000CA485 /* Stdlib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stdlib.swift; sourceTree = "<group>"; };
 		323CE3F021441DF20003A30E /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
 		323CE3F221441E5B0003A30E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		323CE3F4214420270003A30E /* Destructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destructure.swift; sourceTree = "<group>"; };
@@ -102,6 +100,7 @@
 		3248A46E21435E6A00C63AB8 /* Executable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executable.swift; sourceTree = "<group>"; };
 		3248A47321435F0100C63AB8 /* Construct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Construct.swift; sourceTree = "<group>"; };
 		3248A47721435F7900C63AB8 /* CaseConstruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseConstruct.swift; sourceTree = "<group>"; };
+		326A428A21769AE6002821F0 /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		32AF604D2159602A00A6FE18 /* wren.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wren.h; sourceTree = "<group>"; };
 		32AF604E2159602A00A6FE18 /* wren.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = wren.hpp; sourceTree = "<group>"; };
 		32AF605A2159602A00A6FE18 /* wren_opt_random.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wren_opt_random.c; sourceTree = "<group>"; };
@@ -141,9 +140,6 @@
 		32EA9F9A214DFED1005CDEC3 /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
 		32EA9F9D214DFF9C005CDEC3 /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		32EA9FA0214E0050005CDEC3 /* DragDropLanguage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DragDropLanguage-Bridging-Header.h"; sourceTree = "<group>"; };
-		C39468DB5499EF7931E8DB21 /* Pods-DragDropLanguage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropLanguage.release.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropLanguage/Pods-DragDropLanguage.release.xcconfig"; sourceTree = "<group>"; };
-		CCE4C2A7F6ED6EEB0B711582 /* Pods-DragDropLanguage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropLanguage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropLanguage/Pods-DragDropLanguage.debug.xcconfig"; sourceTree = "<group>"; };
-		D3FA90D05CD22610E3E79B56 /* Pods_DragDropLanguage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragDropLanguage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +147,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				934999149F7C5856C0E7C419 /* Pods_DragDropLanguage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +159,6 @@
 				32AF5AA22159602600A6FE18 /* wren */,
 				320E62BE214350540021BCDF /* DragDropLanguage */,
 				320E62BD214350540021BCDF /* Products */,
-				E438D02F3FC9DB793CBAD5FE /* Pods */,
 				533459186B41F26CCF4FB35D /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -180,7 +174,7 @@
 		320E62BE214350540021BCDF /* DragDropLanguage */ = {
 			isa = PBXGroup;
 			children = (
-				32293CDD2170E1A0000CA485 /* Stdlib */,
+				32293CDD2170E1A0000CA485 /* Lib */,
 				32EA9F9F214E0032005CDEC3 /* Runtime */,
 				3248A44A214352AA00C63AB8 /* Model */,
 				3248A46B214359DB00C63AB8 /* Util */,
@@ -222,12 +216,12 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		32293CDD2170E1A0000CA485 /* Stdlib */ = {
+		32293CDD2170E1A0000CA485 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				32293CDE2170E1AF000CA485 /* Stdlib.swift */,
+				326A428A21769AE6002821F0 /* Core.swift */,
 			);
-			path = Stdlib;
+			path = Lib;
 			sourceTree = "<group>";
 		};
 		3248A44A214352AA00C63AB8 /* Model */ = {
@@ -370,18 +364,8 @@
 		533459186B41F26CCF4FB35D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D3FA90D05CD22610E3E79B56 /* Pods_DragDropLanguage.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E438D02F3FC9DB793CBAD5FE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CCE4C2A7F6ED6EEB0B711582 /* Pods-DragDropLanguage.debug.xcconfig */,
-				C39468DB5499EF7931E8DB21 /* Pods-DragDropLanguage.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,7 +375,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 320E62D4214350550021BCDF /* Build configuration list for PBXNativeTarget "DragDropLanguage" */;
 			buildPhases = (
-				AC8D89939D9AEC3BA8C2BE3C /* [CP] Check Pods Manifest.lock */,
+				32293CEB217506DF000CA485 /* Compile Stdlib */,
 				320E62B8214350540021BCDF /* Sources */,
 				320E62B9214350540021BCDF /* Frameworks */,
 				320E62BA214350540021BCDF /* Resources */,
@@ -459,23 +443,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AC8D89939D9AEC3BA8C2BE3C /* [CP] Check Pods Manifest.lock */ = {
+		32293CEB217506DF000CA485 /* Compile Stdlib */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+			inputFileListPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			inputPaths = (
+			);
+			name = "Compile Stdlib";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DragDropLanguage-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
+			shellPath = /bin/bash;
+			shellScript = "eval \"$(rbenv init -)\"\nbundle install\nruby scripts/build-stdlib.rb\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -508,6 +492,7 @@
 				3248A4502143530200C63AB8 /* Module.swift in Sources */,
 				3248A44C214352B300C63AB8 /* Project.swift in Sources */,
 				32AF69812159B83900A6FE18 /* WrenHandle.swift in Sources */,
+				326A428B21769AE6002821F0 /* Core.swift in Sources */,
 				320E62C0214350540021BCDF /* AppDelegate.swift in Sources */,
 				32AF65752159602C00A6FE18 /* wren_core.c in Sources */,
 				32AF65742159602C00A6FE18 /* wren_utils.c in Sources */,
@@ -528,7 +513,6 @@
 				3248A4582143537700C63AB8 /* Struct.swift in Sources */,
 				32AF65722159602C00A6FE18 /* wren_compiler.c in Sources */,
 				3248A4662143590200C63AB8 /* FunctionCall.swift in Sources */,
-				32293CDF2170E1AF000CA485 /* Stdlib.swift in Sources */,
 				32AF656B2159602C00A6FE18 /* wren_opt_meta.wren.inc in Sources */,
 				32EA9F9B214DFED1005CDEC3 /* Script.swift in Sources */,
 				32AF65712159602C00A6FE18 /* wren_value.c in Sources */,
@@ -674,7 +658,6 @@
 		};
 		320E62D5214350550021BCDF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCE4C2A7F6ED6EEB0B711582 /* Pods-DragDropLanguage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -697,7 +680,6 @@
 		};
 		320E62D6214350550021BCDF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C39468DB5499EF7931E8DB21 /* Pods-DragDropLanguage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

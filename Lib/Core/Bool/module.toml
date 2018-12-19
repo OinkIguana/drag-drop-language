@@ -1,0 +1,54 @@
+[module]
+name = "Bool"
+
+[[module.types]]
+kind = "struct"
+name = "Operator"
+fields = [
+  { name = "lhs", type = { kind = "primitive", name = "bool" } },
+  { name = "rhs", type = { kind = "primitive", name = "bool" } },
+]
+
+# basic operators
+
+[[module.functions]]
+name = "and"
+input = "Operator"
+output = { kind = "primitive", name = "bool" }
+
+[[module.functions]]
+name = "or"
+input = "Operator"
+output = { kind = "primitive", name = "bool" }
+
+[[module.functions]]
+name = "xor"
+input = "Operator"
+output = { kind = "primitive", name = "bool" }
+
+[[module.functions]]
+name = "not"
+input = { kind = "primitive", name = "bool" }
+output = { kind = "primitive", name = "bool" }
+
+[[module.functions]]
+name = "identity"
+input = { kind = "primitive", name = "bool" }
+output = { kind = "primitive", name = "bool" }
+
+# conversions
+
+[[module.functions]]
+name = "as_int"
+input = { kind = "primitive", name = "bool" }
+output = { kind = "primitive", name = "int" }
+
+[[module.functions]]
+name = "as_double"
+input = { kind = "primitive", name = "bool" }
+output = { kind = "primitive", name = "double" }
+
+[[module.functions]]
+name = "as_string"
+input = { kind = "primitive", name = "bool" }
+output = { kind = "primitive", name = "string" }

@@ -81,7 +81,7 @@ extension Value {
         case .value(.char):
             return .primitive(.char)
         case .value(.float):
-            return .primitive(.float)
+            return .primitive(.double)
         case .value(.int):
             return .primitive(.int)
         case .value(.string):

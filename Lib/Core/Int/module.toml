@@ -1,0 +1,119 @@
+[module]
+name = "Int"
+
+[[module.types]]
+kind = "struct"
+name = "Operator"
+fields = [
+  { name = "lhs", type = { kind = "primitive", name = "int" } },
+  { name = "rhs", type = { kind = "primitive", name = "int" } },
+]
+
+[[module.types]]
+kind = "struct"
+name = "ToString"
+fields = [
+  { name = "value", type = { kind = "primitive", name = "int" } },
+  { name = "base", type = { kind = "primitive", name = "int" } },
+]
+
+# basic operators
+
+[[module.functions]]
+name = "+"
+input = "Operator"
+output = { kind = "primitive", name = "int" }
+
+[[module.functions]]
+name = "-"
+input = "Operator"
+output = { kind = "primitive", name = "int" }
+
+[[module.functions]]
+name = "*"
+input = "Operator"
+output = { kind = "primitive", name = "int" }
+
+[[module.functions]]
+name = "÷"
+input = "Operator"
+output = { kind = "primitive", name = "int" }
+
+[[module.functions]]
+name = "%"
+input = "Operator"
+output = { kind = "primitive", name = "int" }
+
+[[module.functions]]
+name = "pow"
+input = "Operator"
+output = { kind = "primitive", name = "int" }
+
+[[module.functions]]
+name = "negate"
+input = { kind = "primitive", name = "int" }
+output = { kind = "primitive", name = "int" }
+
+[[module.functions]]
+name = "abs"
+input = { kind = "primitive", name = "int" }
+output = { kind = "primitive", name = "int" }
+
+[[module.functions]]
+name = "=="
+input = "Operator"
+output = { kind = "primitive", name = "bool" }
+
+[[module.functions]]
+name = "!="
+input = "Operator"
+output = { kind = "primitive", name = "bool" }
+
+[[module.functions]]
+name = "<"
+input = "Operator"
+output = { kind = "primitive", name = "bool" }
+
+[[module.functions]]
+name = ">"
+input = "Operator"
+output = { kind = "primitive", name = "bool" }
+
+[[module.functions]]
+name = "≥"
+input = "Operator"
+output = { kind = "primitive", name = "bool" }
+
+[[module.functions]]
+name = "≤"
+input = "Operator"
+output = { kind = "primitive", name = "bool" }
+
+# conversions
+
+[[module.functions]]
+name = "as_double"
+input = { kind = "primitive", name = "int" }
+output = { kind = "primitive", name = "double" }
+
+[[module.functions]]
+name = "as_bool"
+input = { kind = "primitive", name = "int" }
+output = { kind = "primitive", name = "bool" }
+
+[[module.functions]]
+name = "to_string"
+input = "ToString"
+output = { kind = "primitive", name = "string" }
+
+[[module.functions]]
+name = "as_char"
+input = { kind = "primitive", name = "int" }
+output = { kind = "primitive", name = "char" }
+
+# generic helpers
+
+[[module.functions]]
+name = "identity"
+input = { kind = "primitive", name = "int" }
+output = { kind = "primitive", name = "int" }

@@ -10,7 +10,7 @@ enum Primitive: String, Codable {
     case int
     case char
     case string
-    case float
+    case double
     case bool
     case symbol
 }

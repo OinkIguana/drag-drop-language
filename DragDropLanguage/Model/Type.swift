@@ -7,12 +7,14 @@
 //
 
 indirect enum Type: Codable {
+    case definition(Definition)
     case `enum`(Enum)
     case `struct`(Struct)
     case primitive(Primitive)
     case function(FunctionType)
 
     private enum Case: String, Codable {
+        case definition
         case `enum`
         case `struct`
         case primitive
@@ -27,6 +29,7 @@ indirect enum Type: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         switch try container.decode(Case.self, forKey: .case) {
+        case .definition: self = .definition(try container.decode(Definition.self, forKey: .value))
         case .enum: self = .enum(try container.decode(Enum.self, forKey: .value))
         case .struct: self = .struct(try container.decode(Struct.self, forKey: .value))
         case .primitive: self = .primitive(try container.decode(Primitive.self, forKey: .value))
@@ -37,6 +40,9 @@ indirect enum Type: Codable {
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         switch self {
+        case .definition(let value):
+            try container.encode(Case.definition, forKey: .case)
+            try container.encode(value, forKey: .value)
         case .enum(let value):
             try container.encode(Case.enum, forKey: .case)
             try container.encode(value, forKey: .value)

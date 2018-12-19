@@ -1,0 +1,3 @@
+[package]
+name = "Core"
+modules = ["Int", "Bool"]
